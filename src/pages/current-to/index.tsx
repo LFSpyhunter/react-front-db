@@ -9,7 +9,7 @@ export const CurrentTo = () => {
   const params = useParams<{ id: any }>()
   const { data } = useGetToByIdQuery(params.id ?? "")
   if (!data) {
-    return <h2>Загрузка</h2>
+    return <h2> </h2>
   }
   const { placeNumber, createdAt, updatedAt, fio } = data
   return (

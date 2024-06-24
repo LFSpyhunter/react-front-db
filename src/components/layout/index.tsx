@@ -24,7 +24,6 @@ export const Layout = () => {
       <Container>
         <Outlet />
       </Container>
-      
     </>
   )
 }

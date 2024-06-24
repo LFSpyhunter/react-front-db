@@ -1,8 +1,11 @@
 export const formatToClientDate = (date?: Date) => {
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  } as const;
   if (!date) {
     return ""
   }
-  const dateString = new Date(date).toLocaleDateString().split('/')
-  const newDate = `${dateString[1].padStart(2,'0')}.${dateString[0].padStart(2,'0')}.${dateString[2]}`
-  return newDate
+    return new Date(date).toLocaleDateString('ru-RU', options)
 }

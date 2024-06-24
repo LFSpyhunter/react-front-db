@@ -20,20 +20,20 @@ import {
 } from "@nextui-org/react"
 import { CreateTo } from "../../components/create-to"
 import { DeleteTo } from "../../components/delete-to"
-import { FaSave } from "react-icons/fa"
+import { FaDownload } from "react-icons/fa6"
 
 export const CurrentPlace = () => {
   const params = useParams<{ id: any }>()
   const { data } = useGetPlaceByIdQuery(params.id ?? "")
   if (!data) {
-    return <h2>Поста не существует</h2>
+    return <h2> </h2>
   }
   const { number, id, to, address } = data
   return (
     <>
       <div className="flex max-w-screen-xl mx-auto mt-20">
         <div className="flex-1 p-4">
-          <Table>
+          <Table aria-label="Example static collection table">
             <TableHeader>
               <TableColumn>Площадка</TableColumn>
               <TableColumn>ФИО ответственного за ТО</TableColumn>
@@ -50,7 +50,7 @@ export const CurrentPlace = () => {
                     <TableCell>
                       <div className="flex justify-between ">
                         <div>
-                          <FaSave className="text-xl" />
+                          <FaDownload className="text-xl" />
                         </div>
                         <div>
                           <Link href={`/to/${item.id}`}>
@@ -85,9 +85,9 @@ export const CurrentPlace = () => {
             <CreateTo number={number} id={id} address={address} />
             <Divider />
             <CardFooter>
-              <Link isExternal showAnchorIcon href="#">
+              {/* <Link isExternal showAnchorIcon href="#">
                 Неиспарвности
-              </Link>
+              </Link> */}
             </CardFooter>
           </Card>
         </div>

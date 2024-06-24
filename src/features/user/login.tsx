@@ -63,16 +63,6 @@ export const Login: React.FC<Props> = ({ setSelected }) => {
         required="Обязательное поле"
       />
       <ErrorMessage error={error} />
-      <p className="text-center text-small">
-        Нет аккаунта?{" "}
-        <Link
-          size="sm"
-          className="cursor-pointer"
-          onPress={() => setSelected("sign-up")}
-        >
-          Зарегиструйтесь
-        </Link>
-      </p>
       <div className="flex gap=2 justify-end">
         <Button fullWidth color="primary" type="submit" isLoading={isLoading}>
           Войти

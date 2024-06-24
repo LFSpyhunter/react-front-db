@@ -1,11 +1,14 @@
 import { Select, SelectItem } from "@nextui-org/react"
+import { Sostoyanie } from "../../app/myStore"
 
 
 
-export const SelectTo = ({name, defaultvalue, selectValues}:{name:string, defaultvalue:string, selectValues:any}) => {
+export const SelectTo = ({defaultvalue}:{defaultvalue:string}) => {
+  const selectValues=Sostoyanie 
   return (
     <>
-      <Select label="выберите состояние" name={name} defaultSelectedKeys={[defaultvalue]}>
+
+      <Select label="выберите состояние" defaultSelectedKeys={[defaultvalue]} >
       {selectValues.map((value:any) => (
           <SelectItem key={value} value={value}>
             {value}

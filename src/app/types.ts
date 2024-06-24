@@ -22,7 +22,13 @@ export type To = {
     placeTo: Place
     createdAt: Date
     updatedAt: Date
-    protocol: any
+    protocol11: any
+    protocol12: any
+    protocol32: any
+    protocol51: any
+    protocol52: any
+    protocol61: any
+    protocol10: any
     fio: string
 }
 

@@ -7,12 +7,22 @@ export const NavBar = () => {
         <ul className='flex  flex-col mt-10'>
             <li>
                 <NavButton href='protocol11' icon={<GiStabbedNote />}>
-                   Протокол 1.1
+                   Приложение 1.1
+                </NavButton>
+            </li>
+            <li>
+                <NavButton href='protocol12' icon={<GiStabbedNote />}>
+                   Приложение 1.2
                 </NavButton>
             </li>
             <li>
                 <NavButton href='protocol32' icon={<GiStabbedNote />}>
-                    Протокол 3.2
+                    Приложение 3.2
+                </NavButton>
+            </li>
+            <li>
+                <NavButton href='protocol51' icon={<GiStabbedNote />}>
+                    Приложение 5.1
                 </NavButton>
             </li>
         </ul>

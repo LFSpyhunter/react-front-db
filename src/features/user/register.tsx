@@ -1,7 +1,7 @@
 import type React from "react"
 import { useForm } from "react-hook-form"
 import { Input } from "../../components/input"
-import { Button, Link } from "@nextui-org/react"
+import { Button} from "@nextui-org/react"
 import { useRegisterMutation } from "../../app/service/userApi"
 import { useState } from "react"
 import { hasErrorField } from "../../utils/has-error-field"
@@ -56,7 +56,7 @@ export const Register: React.FC<Props> = ({ setSelected }) => {
       <Input
         control={control}
         name="login"
-        label="login"
+        label="Логин"
         type="text"
         required="Обязательное поле"
       />
@@ -90,16 +90,6 @@ export const Register: React.FC<Props> = ({ setSelected }) => {
         required="Обязательное поле"
       />
       <ErrorMessage error={error} />
-      <p className="text-center text-small">
-        Уже есть аккаунт? {" "}
-        <Link
-          size="sm"
-          className="cursor-pointer"
-          onPress={() => setSelected("login")}
-        >
-          Войти
-        </Link>
-      </p>
       <div className="flex gap=2 justify-end">
         <Button fullWidth color="primary" type="submit" isLoading={isLoading}>
           Зарегистрироваться

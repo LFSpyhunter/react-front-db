@@ -14,6 +14,8 @@ import { CurrentPlace } from "./pages/current-place"
 import { CurrentTo } from "./pages/current-to"
 import { Protocol11To } from "./pages/protocol11"
 import { Protocol32To } from "./pages/protocol32"
+import { Protocol12To } from "./pages/protocol12"
+import { Protocol51To } from "./pages/protocol51"
 
 
 const container = document.getElementById("root")
@@ -39,8 +41,16 @@ const router = createBrowserRouter([
             element: <Protocol11To />
           },
           {
+            path: "protocol12",
+            element: <Protocol12To />
+          },
+          {
             path: "protocol32",
             element: <Protocol32To />
+          },
+          {
+            path: "protocol51",
+            element: <Protocol51To />
           },
         ]
       },
